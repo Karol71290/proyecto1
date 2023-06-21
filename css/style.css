@@ -1,0 +1,178 @@
+/* Estilos generales  */
+*{
+
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  background: url(../img/legendOfZelda.jpg) center fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+
+/* Estilo para el Timeline  */
+h1{
+  text-align: center; 
+    font-size: 40px;
+    font-weight: normal;
+    font-family: 'Lucida Handwriting', cursive;
+    color: #333;
+    left: 0;
+    width: 100%;
+    background-color: rgba(80, 82, 235, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    margin-top: 10px;
+}
+#timeline-container {
+  content: ' ';
+  position: absolute;
+  background: rgb(255, 255, 255);
+  width: 1px;
+  left: 50%;
+  padding: 5px;
+}
+.timeline-event {
+  width: 500px;
+  margin: 0px 40px;
+  padding: 20px;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+
+}
+/* Estilos para el primer evento */
+.timeline-event:first-of-type::before {
+  content: none;
+}
+
+/* Estilos para los demás eventos */
+.timeline-event:not(:first-of-type)::before {
+  content: '';
+  position: absolute;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/*PARES*/
+.timeline-event:nth-of-type(odd) {
+  float: left;
+}
+.timeline-event:nth-of-type(odd)::before {
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*IMPARES*/
+.timeline-event:nth-of-type(even) {
+  float: right;
+}
+.timeline-event:nth-of-type(even)::before {
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Estilos para el contenido del JSON */
+.event-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.event-title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.event-image {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.event-text {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Estilo para el formulario  */
+#contenedor-formulario {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(80, 82, 235, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#formulario {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  /*position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(80, 82, 235, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}*/
+
+@media only screen and (max-width: 600px) {
+#timeline-container {
+content: ' ';
+position: absolute;
+background: rgb(255, 255, 255);
+width: 90%;
+left: 50%;
+padding: 5px;
+
+.timeline-event{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.event-image{
+  width: 90%;
+}
+#from-seccion{
+  position: static;
+  width: 100%;
+}
+#timeline-container{
+  display: none;
+}
+}}

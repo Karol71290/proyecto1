@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelda Timeline</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+ <header>
+    <h1>Conociendo Personajes de Zelda</h1>
+ </header>
+<!-- TIMELINE -->
+    <section>
+
+        <div class="timeline-event-content">
+            <div class="timeline-container" id="timeline-container">
+            </div>
+        </div>
+    </section>
+ <!-- FORMULARIO -->
+    <section class="contenedor-formulario" id="formulario-section">
+        <h2>Agregar nuevo evento</h2>
+        <form id="myForm">
+            <label for="date">Date:</label><br>
+            <input type="number" id="date" name="date" min="1900" max="2099" required><br>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="image">Image URL:</label><br>
+            <input type="url" id="image" name="image" required><br>
+            <label for="text">Text:</label><br>
+            <textarea id="text" name="text" required></textarea><br>
+            <button type="submit">Agregar información</button>
+          </form>
+            
+    </section>
+<!-- SCRIPT -->
+    <script src="Js/timeline.js"></script>
+    <script type="text/javascript" src="Js/append_json.js"></script>
+    <script type="text/javascript">
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        submitForm();
+      });
+    </script>
+<!-- SCRIPT -->
+
+</body>
+</html>
